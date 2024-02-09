@@ -1,0 +1,303 @@
+{
+  "Tags": [
+    "GLUE"
+  ],
+  "Source": "GLUE",
+  "CreatedByOtherEntities": true,
+  "Is2D": true,
+  "ReferencedFiles": [
+    {
+      "Name": "Entities/Rock/Rock1.png",
+      "IsSharedStatic": true,
+      "RuntimeType": "Microsoft.Xna.Framework.Graphics.Texture2D",
+      "ProjectsToExcludeFrom": []
+    },
+    {
+      "Name": "Entities/Rock/Rock2.png",
+      "IsSharedStatic": true,
+      "RuntimeType": "Microsoft.Xna.Framework.Graphics.Texture2D",
+      "ProjectsToExcludeFrom": []
+    },
+    {
+      "Name": "Entities/Rock/Rock3.png",
+      "IsSharedStatic": true,
+      "RuntimeType": "Microsoft.Xna.Framework.Graphics.Texture2D",
+      "ProjectsToExcludeFrom": []
+    },
+    {
+      "Name": "Entities/Rock/Rock4.png",
+      "IsSharedStatic": true,
+      "RuntimeType": "Microsoft.Xna.Framework.Graphics.Texture2D",
+      "ProjectsToExcludeFrom": []
+    }
+  ],
+  "CustomVariables": [
+    {
+      "Properties": [
+        {
+          "Name": "Type",
+          "Value": "float",
+          "Type": "String"
+        }
+      ],
+      "Name": "X",
+      "SetByDerived": true
+    },
+    {
+      "Properties": [
+        {
+          "Name": "Type",
+          "Value": "float",
+          "Type": "String"
+        }
+      ],
+      "Name": "Y",
+      "SetByDerived": true
+    },
+    {
+      "Properties": [
+        {
+          "Name": "Type",
+          "Value": "float",
+          "Type": "String"
+        }
+      ],
+      "Name": "Z",
+      "SetByDerived": true
+    },
+    {
+      "Properties": [
+        {
+          "Name": "Type",
+          "Value": "Texture2D",
+          "Type": "String"
+        },
+        {
+          "Name": "Category",
+          "Value": "Texture",
+          "Type": "String"
+        }
+      ],
+      "Name": "SpriteInstanceTexture",
+      "DefaultValue": "Rock1",
+      "SetByDerived": true,
+      "SourceObject": "SpriteInstance",
+      "SourceObjectProperty": "Texture",
+      "Category": "Texture"
+    },
+    {
+      "Properties": [
+        {
+          "Name": "Type",
+          "Value": "float",
+          "Type": "String"
+        },
+        {
+          "Name": "Category",
+          "Value": "Size",
+          "Type": "String"
+        }
+      ],
+      "Name": "CircleInstanceRadius",
+      "DefaultValue": 4.0,
+      "SetByDerived": true,
+      "SourceObject": "CircleInstance",
+      "SourceObjectProperty": "Radius",
+      "Category": "Size"
+    },
+    {
+      "Properties": [
+        {
+          "Name": "Type",
+          "Value": "int",
+          "Type": "String"
+        }
+      ],
+      "Name": "NumberOfRocksToBreakInto",
+      "DefaultValue": 2,
+      "SetByDerived": true
+    },
+    {
+      "Properties": [
+        {
+          "Name": "Type",
+          "Value": "float",
+          "Type": "String"
+        }
+      ],
+      "Name": "RandomSpeedOnBreak",
+      "DefaultValue": 50.0,
+      "SetByDerived": true
+    },
+    {
+      "Properties": [
+        {
+          "Name": "Type",
+          "Value": "int",
+          "Type": "String"
+        }
+      ],
+      "Name": "PointValue",
+      "DefaultValue": 10,
+      "SetByDerived": true
+    }
+  ],
+  "Properties": [
+    {
+      "Name": "ImplementsICollidable",
+      "Value": true,
+      "Type": "bool"
+    },
+    {
+      "Name": "InputDevice",
+      "Value": 0,
+      "Type": "int"
+    }
+  ],
+  "NamedObjects": [
+    {
+      "InstanceName": "CircleInstance",
+      "SourceClassType": "FlatRedBall.Math.Geometry.Circle",
+      "Properties": [
+        {
+          "Name": "AssociateWithFactory",
+          "Value": true,
+          "Type": "bool"
+        }
+      ],
+      "InstructionSaves": [
+        {
+          "Type": "float",
+          "Member": "Radius",
+          "Value": 4.0,
+          "Time": 0.0
+        },
+        {
+          "Type": "bool",
+          "Member": "Visible",
+          "Value": false,
+          "Time": 0.0
+        }
+      ],
+      "SourceType": 2,
+      "SourceFile": "Circle",
+      "HasPublicProperty": true,
+      "AttachToContainer": true,
+      "GenerateTimedEmit": true
+    },
+    {
+      "InstanceName": "SpriteInstance",
+      "SourceClassType": "FlatRedBall.Sprite",
+      "Properties": [
+        {
+          "Name": "AssociateWithFactory",
+          "Value": true,
+          "Type": "bool"
+        }
+      ],
+      "InstructionSaves": [
+        {
+          "Type": "Texture2D",
+          "Member": "Texture",
+          "Value": "Rock1",
+          "Time": 0.0
+        },
+        {
+          "Type": "float",
+          "Member": "TextureScale",
+          "Value": 1.0,
+          "Time": 0.0
+        }
+      ],
+      "SourceType": 2,
+      "SourceFile": "Sprite",
+      "AttachToContainer": true,
+      "GenerateTimedEmit": true
+    }
+  ],
+  "StateCategoryList": [
+    {
+      "Name": "RockSize",
+      "States": [
+        {
+          "Name": "Size1",
+          "InstructionSaves": [
+            {
+              "Type": "Texture2D",
+              "Member": "SpriteInstanceTexture",
+              "Value": "Rock1",
+              "Time": 0.0
+            },
+            {
+              "Type": "float",
+              "Member": "CircleInstanceRadius",
+              "Value": 4.0,
+              "Time": 0.0
+            }
+          ]
+        },
+        {
+          "Name": "Size2",
+          "InstructionSaves": [
+            {
+              "Type": "Texture2D",
+              "Member": "SpriteInstanceTexture",
+              "Value": "Rock2",
+              "Time": 0.0
+            },
+            {
+              "Type": "float",
+              "Member": "CircleInstanceRadius",
+              "Value": 8.0,
+              "Time": 0.0
+            }
+          ]
+        },
+        {
+          "Name": "Size3",
+          "InstructionSaves": [
+            {
+              "Type": "Texture2D",
+              "Member": "SpriteInstanceTexture",
+              "Value": "Rock3",
+              "Time": 0.0
+            },
+            {
+              "Type": "float",
+              "Member": "CircleInstanceRadius",
+              "Value": 12.0,
+              "Time": 0.0
+            }
+          ]
+        },
+        {
+          "Name": "Size4",
+          "InstructionSaves": [
+            {
+              "Type": "Texture2D",
+              "Member": "SpriteInstanceTexture",
+              "Value": "Rock4",
+              "Time": 0.0
+            },
+            {
+              "Type": "float",
+              "Member": "CircleInstanceRadius",
+              "Value": 16.0,
+              "Time": 0.0
+            }
+          ]
+        }
+      ],
+      "ExcludedVariables": [
+        "X",
+        "Y",
+        "Z",
+        "NumberOfRocksToBreakInto",
+        "RandomSpeedOnBreak",
+        "PointValue"
+      ]
+    }
+  ],
+  "Name": "Entities\\Rock",
+  "CustomClassesForExport": []
+}

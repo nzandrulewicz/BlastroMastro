@@ -1,0 +1,16 @@
+{
+  "Tags": [
+    "GLUE"
+  ],
+  "Source": "GLUE",
+  "ReferencedFiles": [
+    {
+      "Name": "GumProject/Screens/StartMenuGum.gusx",
+      "IsSharedStatic": true,
+      "RuntimeType": "RockBlaster.GumRuntimes.StartMenuGumRuntime",
+      "ProjectsToExcludeFrom": []
+    }
+  ],
+  "Name": "Screens\\StartMenu",
+  "CustomClassesForExport": []
+}

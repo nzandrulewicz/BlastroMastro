@@ -1,0 +1,653 @@
+{
+  "Tags": [
+    "GLUE"
+  ],
+  "Source": "GLUE",
+  "ReferencedFiles": [
+    {
+      "Name": "GumProject/Screens/GameScreenGum.gusx",
+      "IsSharedStatic": true,
+      "RuntimeType": "RockBlaster.GumRuntimes.GameScreenGumRuntime",
+      "ProjectsToExcludeFrom": []
+    }
+  ],
+  "NamedObjects": [
+    {
+      "InstanceName": "PlayerList",
+      "SourceClassType": "FlatRedBall.Math.PositionedObjectList<T>",
+      "Properties": [
+        {
+          "Name": "AssociateWithFactory",
+          "Value": true,
+          "Type": "bool"
+        }
+      ],
+      "InstructionSaves": [],
+      "SourceType": 2,
+      "SourceFile": "PositionedObjectList (Generic)",
+      "SourceClassGenericType": "Entities\\Player",
+      "ExposedInDerived": true,
+      "AttachToContainer": true,
+      "GenerateTimedEmit": true,
+      "ContainedObjects": [
+        {
+          "InstanceName": "Player1",
+          "SourceClassType": "Entities\\Player",
+          "Properties": [
+            {
+              "Name": "AssociateWithFactory",
+              "Value": true,
+              "Type": "bool"
+            }
+          ],
+          "InstructionSaves": [
+            {
+              "Type": "float",
+              "Member": "X",
+              "Value": 0.0,
+              "Time": 0.0
+            },
+            {
+              "Type": "float",
+              "Member": "Y",
+              "Value": 0.0,
+              "Time": 0.0
+            }
+          ],
+          "SourceType": 1,
+          "SourceFile": "Entities\\Player",
+          "ExposedInDerived": true,
+          "AttachToContainer": true,
+          "GenerateTimedEmit": true
+        }
+      ]
+    },
+    {
+      "InstanceName": "RockList",
+      "SourceClassType": "FlatRedBall.Math.PositionedObjectList<T>",
+      "Properties": [
+        {
+          "Name": "AssociateWithFactory",
+          "Value": true,
+          "Type": "bool"
+        }
+      ],
+      "InstructionSaves": [],
+      "SourceType": 2,
+      "SourceFile": "PositionedObjectList (Generic)",
+      "SourceClassGenericType": "Entities\\Rock",
+      "ExposedInDerived": true,
+      "AttachToContainer": true,
+      "GenerateTimedEmit": true
+    },
+    {
+      "InstanceName": "BulletList",
+      "SourceClassType": "FlatRedBall.Math.PositionedObjectList<T>",
+      "Properties": [
+        {
+          "Name": "AssociateWithFactory",
+          "Value": true,
+          "Type": "bool"
+        }
+      ],
+      "InstructionSaves": [],
+      "SourceType": 2,
+      "SourceFile": "PositionedObjectList (Generic)",
+      "SourceClassGenericType": "Entities\\Bullet",
+      "ExposedInDerived": true,
+      "AttachToContainer": true,
+      "GenerateTimedEmit": true
+    },
+    {
+      "InstanceName": "RockSpawnerList",
+      "SourceClassType": "FlatRedBall.Math.PositionedObjectList<T>",
+      "Properties": [
+        {
+          "Name": "AssociateWithFactory",
+          "Value": true,
+          "Type": "bool"
+        }
+      ],
+      "InstructionSaves": [],
+      "SourceType": 2,
+      "SourceFile": "PositionedObjectList (Generic)",
+      "SourceClassGenericType": "Entities\\RockSpawner",
+      "ExposedInDerived": true,
+      "AttachToContainer": true,
+      "GenerateTimedEmit": true,
+      "ContainedObjects": [
+        {
+          "InstanceName": "RockSpawner1",
+          "SourceClassType": "Entities\\RockSpawner",
+          "Properties": [
+            {
+              "Name": "AssociateWithFactory",
+              "Value": true,
+              "Type": "bool"
+            }
+          ],
+          "InstructionSaves": [],
+          "SourceType": 1,
+          "SourceFile": "Entities\\RockSpawner",
+          "AttachToContainer": true,
+          "GenerateTimedEmit": true
+        }
+      ]
+    },
+    {
+      "InstanceName": "SolidCollision",
+      "SourceClassType": "FlatRedBall.TileCollisions.TileShapeCollection",
+      "Properties": [
+        {
+          "Name": "AssociateWithFactory",
+          "Value": true,
+          "Type": "bool"
+        },
+        {
+          "Name": "CollisionCreationOptions",
+          "Value": 0,
+          "Type": "int"
+        },
+        {
+          "Name": "CollisionTileSize",
+          "Value": 16.0,
+          "Type": "float"
+        },
+        {
+          "Name": "CollisionFillWidth",
+          "Value": 32,
+          "Type": "int"
+        },
+        {
+          "Name": "CollisionFillHeight",
+          "Value": 1,
+          "Type": "int"
+        },
+        {
+          "Name": "InnerSizeWidth",
+          "Value": 800.0,
+          "Type": "float"
+        },
+        {
+          "Name": "InnerSizeHeight",
+          "Value": 600.0,
+          "Type": "float"
+        }
+      ],
+      "InstructionSaves": [],
+      "SourceType": 2,
+      "SourceFile": "FlatRedBall.TileCollisions.TileShapeCollection",
+      "HasPublicProperty": true,
+      "SetByDerived": true,
+      "AttachToContainer": true,
+      "GenerateTimedEmit": true
+    },
+    {
+      "InstanceName": "PlayerVsSolidCollision",
+      "SourceClassType": "FlatRedBall.Math.Collision.CollidableListVsTileShapeCollectionRelationship<Entities.Player>",
+      "Properties": [
+        {
+          "Name": "AssociateWithFactory",
+          "Value": true,
+          "Type": "bool"
+        },
+        {
+          "Name": "IsAutoNameEnabled",
+          "Value": true,
+          "Type": "bool"
+        },
+        {
+          "Name": "FirstCollisionName",
+          "Value": "PlayerList",
+          "Type": "String"
+        },
+        {
+          "Name": "SecondCollisionName",
+          "Value": "SolidCollision",
+          "Type": "String"
+        },
+        {
+          "Name": "CollisionType",
+          "Value": 2,
+          "Type": "int"
+        },
+        {
+          "Name": "IsCollisionActive",
+          "Value": true,
+          "Type": "bool"
+        },
+        {
+          "Name": "IsAutomaticallyApplyPhysicsChecked",
+          "Value": true,
+          "Type": "bool"
+        },
+        {
+          "Name": "SecondCollisionMass",
+          "Value": 1.0,
+          "Type": "float"
+        },
+        {
+          "Name": "SoftCollisionCoefficient",
+          "Value": 1.0,
+          "Type": "float"
+        },
+        {
+          "Name": "FirstSubCollisionSelectedItem",
+          "Value": "<Entire Object>",
+          "Type": "String"
+        },
+        {
+          "Name": "IsDealDamageChecked",
+          "Value": true,
+          "Type": "Object"
+        },
+        {
+          "Name": "IsDestroyFirstOnDamageChecked",
+          "Value": true,
+          "Type": "Object"
+        },
+        {
+          "Name": "IsDestroySecondOnDamageChecked",
+          "Value": true,
+          "Type": "Object"
+        },
+        {
+          "Name": "FirstCollisionMass",
+          "Value": 1.0,
+          "Type": "float"
+        },
+        {
+          "Name": "CollisionElasticity",
+          "Value": 1.0,
+          "Type": "float"
+        },
+        {
+          "Name": "SecondSubCollisionSelectedItem",
+          "Type": "String"
+        }
+      ],
+      "InstructionSaves": [],
+      "SourceType": 2,
+      "SourceFile": "FlatRedBall.Math.Collision.CollidableListVsTileShapeCollectionRelationship<Entities.Player>",
+      "AttachToContainer": true,
+      "GenerateTimedEmit": true
+    },
+    {
+      "InstanceName": "PlayerVsRock",
+      "SourceClassType": "FlatRedBall.Math.Collision.ListVsListRelationship<Entities.Player, Entities.Rock>",
+      "Properties": [
+        {
+          "Name": "AssociateWithFactory",
+          "Value": true,
+          "Type": "bool"
+        },
+        {
+          "Name": "IsAutoNameEnabled",
+          "Value": true,
+          "Type": "bool"
+        },
+        {
+          "Name": "FirstCollisionName",
+          "Value": "PlayerList",
+          "Type": "String"
+        },
+        {
+          "Name": "SecondCollisionName",
+          "Value": "RockList",
+          "Type": "String"
+        },
+        {
+          "Name": "IsCollisionActive",
+          "Value": true,
+          "Type": "bool"
+        },
+        {
+          "Name": "IsAutomaticallyApplyPhysicsChecked",
+          "Value": true,
+          "Type": "bool"
+        },
+        {
+          "Name": "FirstCollisionMass",
+          "Value": 0.1,
+          "Type": "float"
+        },
+        {
+          "Name": "SecondCollisionMass",
+          "Value": 0.8,
+          "Type": "float"
+        },
+        {
+          "Name": "SoftCollisionCoefficient",
+          "Value": 1.0,
+          "Type": "float"
+        },
+        {
+          "Name": "CollisionElasticity",
+          "Value": 1.0,
+          "Type": "float"
+        },
+        {
+          "Name": "FirstSubCollisionSelectedItem",
+          "Value": "<Entire Object>",
+          "Type": "String"
+        },
+        {
+          "Name": "SecondSubCollisionSelectedItem",
+          "Value": "<Entire Object>",
+          "Type": "String"
+        },
+        {
+          "Name": "IsDealDamageChecked",
+          "Value": true,
+          "Type": "Object"
+        },
+        {
+          "Name": "IsDestroyFirstOnDamageChecked",
+          "Value": true,
+          "Type": "Object"
+        },
+        {
+          "Name": "IsDestroySecondOnDamageChecked",
+          "Value": true,
+          "Type": "Object"
+        },
+        {
+          "Name": "CollisionType",
+          "Value": 0,
+          "Type": "int"
+        }
+      ],
+      "InstructionSaves": [],
+      "SourceType": 2,
+      "SourceFile": "FlatRedBall.Math.Collision.ListVsListRelationship<Entities.Player, Entities.Rock>",
+      "AttachToContainer": true,
+      "GenerateTimedEmit": true
+    },
+    {
+      "InstanceName": "BulletVsRock",
+      "SourceClassType": "FlatRedBall.Math.Collision.ListVsListRelationship<Entities.Bullet, Entities.Rock>",
+      "Properties": [
+        {
+          "Name": "AssociateWithFactory",
+          "Value": true,
+          "Type": "bool"
+        },
+        {
+          "Name": "IsAutoNameEnabled",
+          "Value": true,
+          "Type": "bool"
+        },
+        {
+          "Name": "FirstCollisionName",
+          "Value": "BulletList",
+          "Type": "String"
+        },
+        {
+          "Name": "SecondCollisionName",
+          "Value": "RockList",
+          "Type": "String"
+        },
+        {
+          "Name": "FirstSubCollisionSelectedItem",
+          "Value": "<Entire Object>",
+          "Type": "String"
+        },
+        {
+          "Name": "SecondSubCollisionSelectedItem",
+          "Value": "<Entire Object>",
+          "Type": "String"
+        },
+        {
+          "Name": "IsCollisionActive",
+          "Value": true,
+          "Type": "bool"
+        },
+        {
+          "Name": "IsAutomaticallyApplyPhysicsChecked",
+          "Value": true,
+          "Type": "bool"
+        },
+        {
+          "Name": "FirstCollisionMass",
+          "Value": 1.0,
+          "Type": "float"
+        },
+        {
+          "Name": "SecondCollisionMass",
+          "Value": 1.0,
+          "Type": "float"
+        },
+        {
+          "Name": "SoftCollisionCoefficient",
+          "Value": 1.0,
+          "Type": "float"
+        },
+        {
+          "Name": "CollisionElasticity",
+          "Value": 1.0,
+          "Type": "float"
+        },
+        {
+          "Name": "IsDealDamageChecked",
+          "Value": true,
+          "Type": "Object"
+        },
+        {
+          "Name": "IsDestroyFirstOnDamageChecked",
+          "Value": true,
+          "Type": "Object"
+        },
+        {
+          "Name": "IsDestroySecondOnDamageChecked",
+          "Value": true,
+          "Type": "Object"
+        },
+        {
+          "Name": "CollisionType",
+          "Value": 0,
+          "Type": "int"
+        }
+      ],
+      "InstructionSaves": [],
+      "SourceType": 2,
+      "SourceFile": "FlatRedBall.Math.Collision.ListVsListRelationship<Entities.Bullet, Entities.Rock>",
+      "AttachToContainer": true,
+      "GenerateTimedEmit": true
+    },
+    {
+      "InstanceName": "RockVsRock",
+      "SourceClassType": "FlatRedBall.Math.Collision.ListVsListRelationship<Entities.Rock, Entities.Rock>",
+      "Properties": [
+        {
+          "Name": "AssociateWithFactory",
+          "Value": true,
+          "Type": "bool"
+        },
+        {
+          "Name": "IsAutoNameEnabled",
+          "Value": true,
+          "Type": "bool"
+        },
+        {
+          "Name": "FirstCollisionName",
+          "Value": "RockList",
+          "Type": "String"
+        },
+        {
+          "Name": "SecondCollisionName",
+          "Value": "RockList",
+          "Type": "String"
+        },
+        {
+          "Name": "IsCollisionActive",
+          "Value": true,
+          "Type": "bool"
+        },
+        {
+          "Name": "IsAutomaticallyApplyPhysicsChecked",
+          "Value": true,
+          "Type": "bool"
+        },
+        {
+          "Name": "FirstCollisionMass",
+          "Value": 1.0,
+          "Type": "float"
+        },
+        {
+          "Name": "SecondCollisionMass",
+          "Value": 1.0,
+          "Type": "float"
+        },
+        {
+          "Name": "SoftCollisionCoefficient",
+          "Value": 1.0,
+          "Type": "float"
+        },
+        {
+          "Name": "CollisionElasticity",
+          "Value": 0.8,
+          "Type": "float"
+        },
+        {
+          "Name": "FirstSubCollisionSelectedItem",
+          "Value": "<Entire Object>",
+          "Type": "String"
+        },
+        {
+          "Name": "SecondSubCollisionSelectedItem",
+          "Value": "<Entire Object>",
+          "Type": "String"
+        },
+        {
+          "Name": "IsDealDamageChecked",
+          "Value": true,
+          "Type": "Object"
+        },
+        {
+          "Name": "IsDestroyFirstOnDamageChecked",
+          "Value": true,
+          "Type": "Object"
+        },
+        {
+          "Name": "IsDestroySecondOnDamageChecked",
+          "Value": true,
+          "Type": "Object"
+        },
+        {
+          "Name": "CollisionType",
+          "Value": 2,
+          "Type": "int"
+        }
+      ],
+      "InstructionSaves": [],
+      "SourceType": 2,
+      "SourceFile": "FlatRedBall.Math.Collision.ListVsListRelationship<Entities.Rock, Entities.Rock>",
+      "AttachToContainer": true,
+      "GenerateTimedEmit": true
+    },
+    {
+      "InstanceName": "TextInstance",
+      "Properties": [
+        {
+          "Name": "AssociateWithFactory",
+          "Value": true,
+          "Type": "bool"
+        }
+      ],
+      "InstructionSaves": [],
+      "SourceFile": "GumProject/Screens/GameScreenGum.gusx",
+      "SourceName": "TextInstance (RockBlaster.GumRuntimes.TextRuntime)",
+      "AttachToContainer": true,
+      "GenerateTimedEmit": true
+    },
+    {
+      "InstanceName": "GameOverAnnouncement",
+      "Properties": [
+        {
+          "Name": "AssociateWithFactory",
+          "Value": true,
+          "Type": "bool"
+        }
+      ],
+      "InstructionSaves": [],
+      "SourceFile": "GumProject/Screens/GameScreenGum.gusx",
+      "SourceName": "GameOverAnnouncement (RockBlaster.GumRuntimes.TextRuntime)",
+      "AttachToContainer": true,
+      "GenerateTimedEmit": true
+    },
+    {
+      "InstanceName": "Background",
+      "SourceClassType": "FlatRedBall.Sprite",
+      "Properties": [
+        {
+          "Name": "AssociateWithFactory",
+          "Value": true,
+          "Type": "bool"
+        }
+      ],
+      "InstructionSaves": [
+        {
+          "Type": "float",
+          "Member": "TextureScale",
+          "Value": 1.0,
+          "Time": 0.0
+        },
+        {
+          "Type": "float",
+          "Member": "Red",
+          "Value": 0.25490198,
+          "Time": 0.0
+        },
+        {
+          "Type": "float",
+          "Member": "Green",
+          "Value": 0.0,
+          "Time": 0.0
+        },
+        {
+          "Type": "float",
+          "Member": "Blue",
+          "Value": 0.24313726,
+          "Time": 0.0
+        },
+        {
+          "Type": "float",
+          "Member": "Width",
+          "Value": 480.0,
+          "Time": 0.0
+        },
+        {
+          "Type": "float",
+          "Member": "Height",
+          "Value": 270.0,
+          "Time": 0.0
+        },
+        {
+          "Type": "float",
+          "Member": "Z",
+          "Value": -50.0,
+          "Time": 0.0
+        }
+      ],
+      "SourceType": 2,
+      "SourceFile": "Sprite",
+      "AttachToContainer": true,
+      "GenerateTimedEmit": true
+    }
+  ],
+  "Name": "Screens\\GameScreen",
+  "Events": [
+    {
+      "EventName": "BulletVsRockCollided",
+      "SourceObject": "BulletVsRock",
+      "SourceObjectEvent": "CollisionOccurred"
+    },
+    {
+      "EventName": "PlayerVsRockCollided",
+      "SourceObject": "PlayerVsRock",
+      "SourceObjectEvent": "CollisionOccurred"
+    }
+  ],
+  "CustomClassesForExport": [],
+  "IsAbstract": true
+}

@@ -1,0 +1,111 @@
+{
+  "UserEvents": {
+    "PC": [
+      {
+        "NewName": "GameScreenGum.TextInstance",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2024-02-09T04:24:06.5862543Z"
+      },
+      {
+        "NewName": "HealthBar",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 0,
+        "TimestampUtc": "2024-02-09T04:50:46.8388754Z"
+      },
+      {
+        "NewName": "HealthBar (Container).ColoredRectangleInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2024-02-09T04:51:57.5933992Z"
+      },
+      {
+        "NewName": "HealthBar (Container).Background",
+        "OldName": "HealthBar (Container).ColoredRectangleInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2024-02-09T04:52:17.1423427Z"
+      },
+      {
+        "NewName": "HealthBar (Container).ColoredRectangleInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2024-02-09T04:53:19.2546969Z"
+      },
+      {
+        "NewName": "HealthBar (Container).Foreground",
+        "OldName": "HealthBar (Container).ColoredRectangleInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2024-02-09T04:53:28.0221083Z"
+      },
+      {
+        "NewName": "GameScreenGum.TextInstance1",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2024-02-09T05:34:47.0359376Z"
+      },
+      {
+        "NewName": "GameScreenGum.GameOverAnnouncement",
+        "OldName": "GameScreenGum.TextInstance1",
+        "ElementType": "Screens",
+        "EventType": 7,
+        "TimestampUtc": "2024-02-09T05:35:04.1413532Z"
+      },
+      {
+        "NewName": "StartMenuGum.TextInstance",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2024-02-09T20:34:09.2617479Z"
+      },
+      {
+        "NewName": "StartMenuGum.GameTitle",
+        "OldName": "StartMenuGum.TextInstance",
+        "ElementType": "Screens",
+        "EventType": 7,
+        "TimestampUtc": "2024-02-09T20:34:17.8310089Z"
+      },
+      {
+        "NewName": "StartMenuGum.ButtonStandardInstance",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2024-02-09T20:37:01.0287724Z"
+      },
+      {
+        "NewName": "StartMenuGum.PlayButton",
+        "OldName": "StartMenuGum.ButtonStandardInstance",
+        "ElementType": "Screens",
+        "EventType": 7,
+        "TimestampUtc": "2024-02-09T20:40:40.4979155Z"
+      },
+      {
+        "NewName": "GameScreenGum.ColoredRectangleInstance",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2024-02-09T21:22:43.6923343Z"
+      },
+      {
+        "NewName": "GameScreenGum.GameBackground",
+        "OldName": "GameScreenGum.ColoredRectangleInstance",
+        "ElementType": "Screens",
+        "EventType": 7,
+        "TimestampUtc": "2024-02-09T21:22:52.9059829Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "GameScreenGum.ColoredRectangle GameBackground in GameScreenGum",
+        "ElementType": "Screens",
+        "EventType": 6,
+        "TimestampUtc": "2024-02-09T21:31:28.8042165Z"
+      }
+    ]
+  }
+}
